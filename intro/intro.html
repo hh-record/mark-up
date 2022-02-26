@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>HH Intro</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/intro-assets/css/main.css" />
+		<link rel="stylesheet" href="../static/intro-assets/css/modal.css" />
+		<noscript><link rel="stylesheet" href="../static/intro-assets/css/noscript.css" /></noscript>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+				<header id="header">
+					<h1 class="hanFont">자신만의 이야기를 담고 싶으신가요?</h1>
+					<p class="hanFont">나만의 일기 만들러 가기</p>
+					<nav>
+						<ul>
+							<li><a onclick="togglesginInModal();" class="icon brands fa-dribbble "></a></li>
+							<li><a onclick="togglesginUpModal();" class="icon solid fa-envelope"></a></li>
+							<br>
+							<span style="margin-left: 0.5em; margin-right: 1.5em;">Sign In</span>
+							<span style="margin-left: 1em;">Sign Up</span>
+						</ul>
+					</nav>
+				</header>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<span class="copyright">copyright 2022 &copy; Design for html5up Make for <a href="#">HH</a>.</span>
+				</footer>
+
+				<!-- Sgin In Modal -->
+				<div id="sginInModal" class="modal">
+					<div class="modal-body">
+						<div class="mt-1">
+							<span class="hanFont text-black mr-5">로그인</span>
+							<span class="text-black close" onclick="togglesginInModal();">X</span>
+						</div>
+						<form action="doJoin" method="POST" onsubmit="DoJoinForm__submit(this); return false;">
+							<div class="textForm">
+							  <input name="loginId" type="text" class="id" placeholder="아이디">
+							</div>
+							<div class="textForm">
+							  <input name="loginPw" type="password" class="pw" placeholder="비밀번호">
+							</div>
+							<div class="forgetBox">
+								<ul class="text-black font-size-small">
+									<li><a href="#">아이디를 잊어버리셨나요?</a></li>
+									<li><a href="#">비밀번호를 잊어버리셨나요?</a></li>
+								</ul>
+							</div>
+							<input type="submit" class="btn" value="J O I N"/>
+						  </form>
+					</div>
+				</div>
+
+				<!-- Sgin Up Modal -->
+				<div id="sginUpModal" class="modal">
+					<div class="modal-body">
+						<div class="mt-1">
+							<span class="hanFont text-black mr-5">회원가입</span>
+							<span class="text-black close" onclick="togglesginUpModal();">X</span>
+						</div>
+						<form action="doJoin" method="POST" onsubmit="DoJoinForm__submit(this); return false;">
+							<div class="textForm">
+							  <input name="loginId" type="text" class="id" placeholder="아이디">
+							</div>
+							<div class="textForm">
+							  <input name="loginPw" type="password" class="pw" placeholder="비밀번호">
+							</div>
+							 <div class="textForm">
+							  <input name="loginPwConfirm" type="password" class="pw" placeholder="비밀번호 확인">
+							</div>
+							<div class="textForm">
+							  <input name="name" type="password" class="name" placeholder="이름">
+							</div>
+							 <div class="textForm">
+							  <input name="email" type="text" class="email" placeholder="이메일">
+							</div>
+							<div class="textForm">
+							  <input name="cellphoneNo" type="number" class="cellphoneNo" placeholder="전화번호">
+							</div>
+							<input type="submit" class="btn" value="J O I N"/>
+						  </form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<script>
+			window.onload = function() {
+				document.body.classList.remove('is-preload');
+
+				const sginUpModal = document.getElementById('sginUpModal');
+				const sginInModal = document.getElementById('sginInModal');
+			}
+
+			function togglesginUpModal(name) {
+				sginUpModal.classList.toggle('show');
+			}
+
+			function togglesginInModal(name) {
+				sginInModal.classList.toggle('show');
+			}
+
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>
