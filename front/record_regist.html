@@ -5,95 +5,130 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Record Regist</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../static/main-assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../static/main-assets/css/noscript.css" /></noscript>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-	</head>
-	<body class="is-preload hanFont">
-		<!-- Wrapper -->
-			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+<head>
+    <title>Record Regist</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../static/main-assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../static/main-assets/css/noscript.css" /></noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+</head>
 
-                            <a href="main.html" class="logo">
-                                <span class="symbol"><img src="../static/main-images/logo.svg" alt="" /></span><span class="title">HH</span>
-                            </a>
+<body class="is-preload hanFont">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-                            <div>
-                                <span class="sub-date">2022.01.04</span>
-                            </div>
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
 
-                            <nav>
-                                <ul>
-                                    <li><a href="#menu">Menu</a></li>
-                                </ul>
-                            </nav>
+                <a href="main.html" class="logo">
+                    <span class="symbol"><img src="../static/main-images/logo.svg" alt="" /></span><span class="title">HH</span>
+                </a>
 
-						</div>
-					</header>
+                <div>
+                    <span class="sub-date">2022.01.04</span>
+                </div>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="main.html">Home</a></li>
-							<li><a href="record_celendar.html">달력 보기</a></li>
-							<li><a href="record_detail.html">템플릿 보기</a></li>
-							<li><a href="record_detail.html">내 정보</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-					</nav>
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-                            <input type="text" class="임시제목" placeholder="제목을 입력해주세요.">
-                            <div style="margin-top: 3em;">
-                                <p style="margin: 0;">이미지 썸네일 업로드</p>
-                                <input type="file">
-                            </div>
-							<input type="textarea" class="임시내용">
-                            <input type="button" value="저장">
-                            <input type="button" value="삭제">
-						</div>
-					</div>
+            </div>
+        </header>
 
-				<!-- Footer -->
-                <footer id="footer">
-                    <div class="inner">
-                        <section>
-                            <h2>Follow</h2>
-                            <ul class="icons">
-                                <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-                                <li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-                                <li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-                                <li><a href="#" class="icon brands style2 fa-google"><span class="label">Email</span></a></li>
-                            </ul>
-                        </section>
-                        <ul class="copyright">
-                            <li>&copy; Untitled. All rights reserved</li>
-                            <li>문의 사항은 메일로 보내주세요. 감사합니다.</li>
-                            <li>Version 1.0.0</li>
-                        </ul>
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="record_celendar.html">달력 보기</a></li>
+                <li><a href="record_detail.html">템플릿 보기</a></li>
+                <li><a href="record_detail.html">내 정보</a></li>
+                <li><a href="elements.html">Elements</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <input type="text" class="임시제목" placeholder="제목을 입력해주세요.">
+                <div class="flex-content">
+                    <div class="mt-3">
+                        <p style="margin: 0;">이미지 썸네일 업로드</p>
+                        <input type="file">
                     </div>
-                </footer>
+                    <div class="mt-3">
+                        <input id="themeUse" class="themeUse" type="checkbox" onclick="check();">
+                        <label for="themeUse">주제 일기 작성하기</label>
+                    </div>
+                </div>
+                <div id="quote" class="mt-3" style="display: none;">
+                    <blockquote>나를 행복하게 만드는 것은 무엇인가요?</blockquote>
+                </div>
+                <input type="checkbox">
+                <input type="textarea" class="임시내용">
+                <div class="flex-content">
+                    <div>
+                        <input type="button" value="저장">
+                        <input type="button" value="삭제">
+                    </div>
+                    <div>
+                        <input id="preRecord" style="display: none;" type="button" value="작년 주제 일기 보러가기">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			</div>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Follow</h2>
+                    <ul class="icons">
+                        <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+                        <li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="#" class="icon brands style2 fa-google"><span class="label">Email</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved</li>
+                    <li>문의 사항은 메일로 보내주세요. 감사합니다.</li>
+                    <li>Version 1.0.0</li>
+                </ul>
+            </div>
+        </footer>
 
-		<!-- Scripts -->
-			<script src="../static/main-assets/js/jquery.min.js"></script>
-			<script src="../static/main-assets/js/browser.min.js"></script>
-			<script src="../static/main-assets/js/breakpoints.min.js"></script>
-			<script src="../static/main-assets/js/util.js"></script>
-			<script src="../static/main-assets/js/main.js"></script>
+    </div>
 
-	</body>
+    <!-- Scripts -->
+    <script src="../static/main-assets/js/jquery.min.js"></script>
+    <script src="../static/main-assets/js/browser.min.js"></script>
+    <script src="../static/main-assets/js/breakpoints.min.js"></script>
+    <script src="../static/main-assets/js/util.js"></script>
+    <script src="../static/main-assets/js/main.js"></script>
+
+    <script>
+        function check() {
+            let quote = document.getElementById('quote');
+            let preRecord = document.getElementById('preRecord');
+
+            if (quote.style.display == 'none') {
+                quote.style.display = 'block';
+                preRecord.style.display = 'block';
+            } else {
+                quote.style.display = 'none';
+                preRecord.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+
 </html>
