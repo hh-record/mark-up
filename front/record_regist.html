@@ -11,6 +11,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../static/main-assets/css/main.css" />
+    <link rel="stylesheet" href="../static/main-assets/css/checkbox.css" />
     <noscript><link rel="stylesheet" href="../static/main-assets/css/noscript.css" /></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +62,11 @@
                 <div class="flex-content">
                     <div class="mt-3">
                         <p style="margin: 0;">이미지 썸네일 업로드</p>
-                        <input type="file">
+                        <div class="filebox mt-1">
+                            <input class="upload-name hanFont" value="프로필 사진 업로드" placeholder="첨부파일">
+                            <label for="file">파일찾기</label>
+                            <input type="file" id="file">
+                        </div>
                     </div>
                     <div class="mt-3">
                         <input id="themeUse" class="themeUse" type="checkbox" onclick="check();">
@@ -127,6 +132,10 @@
                 preRecord.style.display = 'none';
             }
         }
+        $("#file").on('change', function() {
+            var fileName = $("#file").val();
+            $(".upload-name").val(fileName);
+        });
     </script>
 
 </body>
