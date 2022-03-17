@@ -6,7 +6,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../static/main-assets/css/main.css" />
-    <link rel="stylesheet" href="../static/main-assets/css/modal.css" />
     <noscript><link rel="stylesheet" href="../static/main-assets/css/noscript.css" /></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,19 +52,15 @@
                     <div class="container">
                         <div class="sort-end flex-content">
                             <div>
-                                <div class="box">
+                                <div class="box ml-2">
                                     <img class="profile" src="../static/main-images/pic05.jpg" alt="">
                                 </div>
-                                <ul class="pl-0">
-                                    <li class="follow">
-                                        <a onclick="toggleFollowerModal();">Follower 132</a>
-                                    </li>
-                                    |
-                                    <li class="follow">
-                                        <a onclick="toggleFollowingModal();">Following 34</a>
-                                    </li>
-                                </ul>
-                                <div class="flex-content">
+                                <div class="filebox">
+                                    <input class="upload-name hanFont" value="프로필 사진 업로드" placeholder="첨부파일">
+                                    <label for="file">파일찾기</label>
+                                    <input type="file" id="file">
+                                </div>
+                                <div class="flex-content mt-3">
                                     <div>프로필<br>비공개 / 공개</div>
                                     <div>
                                         <input type="checkbox" id="switch" readonly>
@@ -80,32 +75,37 @@
                             <div class="col-md-12 order-md-1">
                                 <h2>내 정보</h2>
 
-                                <div class="mb-2">
-                                    <label for="address">아이디</label>
-                                    <div>admin1</div>
-                                </div>
+                                <form>
+                                    <div class="mb-2">
+                                        <label for="address">아이디</label>
+                                        <div>admin1</div>
+                                    </div>
 
-                                <div class="mb-2">
-                                    <label for="username">닉네임</label>
-                                    <div class="input-group">관리자1</div>
-                                </div>
+                                    <div class="mb-2">
+                                        <label for="userName">닉네임</label>
+                                        <input id="userName" name="userName" class="w-100" type="text" value="관리자1">
+                                    </div>
 
 
-                                <div class="mb-2">
-                                    <label for="email">이메일</label>
-                                    <div class="input-group">ghdcoalss33@gmail.com</div>
-                                </div>
+                                    <div class="mb-2">
+                                        <label for="email">이메일</label>
+                                        <div class="input-group">ghdcoalss33@gmail.com</div>
+                                    </div>
 
-                                <div class="mb-2">
-                                    <label for="address2">전화번호</label>
-                                    <div>010-1111-2222</div>
-                                </div>
+                                    <div class="mb-2">
+                                        <label for="phoneNumber">전화번호</label>
+                                        <input id="phoneNumber" name="phoneNumber" class="w-100" type="text" value="010-1111-2222">
+                                    </div>
 
-                                <div>
-                                    <a href="my_modify_page.html">
-                                        <input type="button" value="내 정보 수정하러 가기">
-                                    </a>
-                                </div>
+                                    <div>
+                                        <a href="my_page.html">
+                                            <input type="button" value="수정하기">
+                                        </a>
+                                        <a href="my_page.html">
+                                            <input type="button" value="탈퇴하기">
+                                        </a>
+                                    </div>
+                                </form>
 
                             </div>
                         </div>
@@ -134,43 +134,20 @@
             </div>
         </footer>
 
-        <div id="follower" class="modal">
-            <div class="modal-body">
-                <ul>
-                    <li class="flex-content">
-                        <div class="mini-box">
-                            <img class="profile" src="../static/main-images/pic03.jpg" alt="">
-                        </div>
-                        @coals_0329
-                    </li>
-                </ul>
-            </div>
+        <!-- Scripts -->
+        <script src="../static/main-assets/js/jquery.min.js"></script>
+        <script src="../static/main-assets/js/browser.min.js"></script>
+        <script src="../static/main-assets/js/breakpoints.min.js"></script>
+        <script src="../static/main-assets/js/util.js"></script>
+        <script src="../static/main-assets/js/main.js"></script>
 
-            <div id="following" class="modal">
-                <div class="modal-body">
+        <script>
+            $("#file").on('change', function() {
+                var fileName = $("#file").val();
+                $(".upload-name").val(fileName);
+            });
+        </script>
 
-                </div>
-            </div>
-
-            <!-- Scripts -->
-            <script src="../static/main-assets/js/jquery.min.js"></script>
-            <script src="../static/main-assets/js/browser.min.js"></script>
-            <script src="../static/main-assets/js/breakpoints.min.js"></script>
-            <script src="../static/main-assets/js/util.js"></script>
-            <script src="../static/main-assets/js/main.js"></script>
-
-            <script>
-                function toggleFollowerModal(name) {
-                    let followerModal = document.getElementById('follower');
-                    followerModal.classList.toggle('show');
-                }
-
-                function toggleFollowingModal(name) {
-                    let followingModal = document.getElementById('following');
-                    followingModal.classList.toggle('show');
-                }
-            </script>
-        </div>
 
 </body>
 
