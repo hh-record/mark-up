@@ -40,6 +40,14 @@
     width: 5em;
 }
 
+.mr-3 {
+    margin-right: 3em;
+}
+
+.mr-4 {
+    margin-right: 4em;
+}
+
 .w-100 {
     width: 100% !important;
 }
