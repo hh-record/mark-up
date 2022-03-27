@@ -68,8 +68,8 @@
                                 <div class="flex-content">
                                     <div>프로필<br>비공개 / 공개</div>
                                     <div>
-                                        <input type="checkbox" id="switch" readonly>
-                                        <label for="switch" class="switch_label">
+                                        <input type="checkbox" id="switch" onclick="toggleIsPrivate();">
+                                        <label for="switch" id="switch_label" class="switch_label">
                                           <span class="onf_btn"></span>
                                         </label>
                                     </div>
@@ -168,6 +168,17 @@
                 function toggleFollowingModal(name) {
                     let followingModal = document.getElementById('following');
                     followingModal.classList.toggle('show');
+                }
+
+                function toggleIsPrivate() {
+                    let switchLabel = document.getElementById('switch_label');
+                    let style = window.getComputedStyle(switchLabel).background;
+
+                    if (style.indexOf('rgb(239, 239, 239)') < 0) {
+                        alert("프로필을 비공개하시겠습니까?");
+                    } else {
+                        alert("프로필을 공개하시겠습니까?");
+                    }
                 }
             </script>
         </div>
