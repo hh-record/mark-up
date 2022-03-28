@@ -5,12 +5,12 @@
     <title>Record Regist</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../static/main-assets/css/main.css" />
+	<link rel="stylesheet" href="../static/main-assets/css/main.css" />
     <link rel="stylesheet" href="../static/main-assets/css/modal.css" />
-    <noscript><link rel="stylesheet" href="../static/main-assets/css/noscript.css" /></noscript>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+	<noscript><link rel="stylesheet" href="../static/main-assets/css/noscript.css" /></noscript>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 </head>
 
 <body class="is-preload hanFont">
@@ -21,10 +21,12 @@
         <header id="header">
             <div class="inner">
 
+                <!-- Logo -->
                 <a href="main.html" class="logo">
                     <span class="symbol"><img src="../static/main-images/logo.svg" alt="" /></span><span class="title">HH</span>
                 </a>
 
+                <!-- Nav -->
                 <nav>
                     <ul>
                         <li><a href="#menu">Menu</a></li>
@@ -41,7 +43,7 @@
                 <li><a href="main.html">Home</a></li>
                 <li><a href="record_celendar.html">달력 보기</a></li>
                 <li><a href="record_detail.html">템플릿 보기</a></li>
-                <li><a href="record_detail.html">내 정보</a></li>
+                <li><a href="my_page.html">내 정보</a></li>
                 <li><a href="elements.html">Elements</a></li>
             </ul>
         </nav>
@@ -57,11 +59,11 @@
                                     <img class="profile" src="../static/main-images/pic05.jpg" alt="">
                                 </div>
                                 <ul class="pl-0">
-                                    <li class="follow">
+                                    <li class="follow pointer">
                                         <a onclick="toggleFollowerModal();">Follower 132</a>
                                     </li>
                                     |
-                                    <li class="follow">
+                                    <li class="follow pointer">
                                         <a onclick="toggleFollowingModal();">Following 34</a>
                                     </li>
                                 </ul>
@@ -135,26 +137,112 @@
         </footer>
 
         <div id="follower" class="modal">
-            <div class="modal-body">
-                <div class="mt-1 mb-1 flex-content">
+            <div class="modal-body p-30 position-fixed">
+                <div class="mt-1 mb-2 flex-content">
                     <span class="hanFont text-black">follower</span>
-                    <span class="text-black" onclick="toggleFollowerModal();">X</span>
+                    <span class="text-black pointer" onclick="toggleFollowerModal();">X</span>
                 </div>
-                <ul>
-                    <li class="flex-content">
+                <ul class="p-none m-none mb-2">
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic01.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @happy_dog_146
+                        </span>
+                    </li>
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic02.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @dobby_is_free
+                        </span>
+                    </li>
+                    <li class="flex-content h-50 mb-05">
                         <div class="mini-box">
                             <img class="profile" src="../static/main-images/pic03.jpg" alt="">
                         </div>
-                        @coals_0329
+                        <span class="vertical-align">
+                            @lilliliiilil
+                        </span>
+                    </li>
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic10.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @coals_0329
+                        </span>
                     </li>
                 </ul>
-            </div>
-
-            <div id="following" class="modal">
-                <div class="modal-body">
-
+                <div class="modal-page w-none ml-15 mt-1">
+                    <ul class="modal-pagination page-modal">
+                        <li><a href="#" class="modal-arrow modal-left">&lt;&lt;</a></li>
+                        <li><a href="#" class="modal-active modal-num">1</a></li>
+                        <li><a href="#" class="modal-num">2</a></li>
+                        <li><a href="#" class="modal-num">3</a></li>
+                        <li><a href="#" class="modal-num">4</a></li>
+                        <li><a href="#" class="modal-num">5</a></li>
+                        <li><a href="#" class="modal-arrow modal-right">&gt;&gt;</a></li>
+                    </ul>
                 </div>
             </div>
+        </div>
+
+        <div id="following" class="modal">
+            <div class="modal-body p-30 position-fixed">
+                <div class="mt-1 mb-2 flex-content">
+                    <span class="hanFont text-black">following</span>
+                    <span class="text-black pointer" onclick="toggleFollowingModal();">X</span>
+                </div>
+                <ul class="p-none m-none mb-2">
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic01.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @happy_dog_146
+                        </span>
+                    </li>
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic02.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @dobby_is_free
+                        </span>
+                    </li>
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic03.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @lilliliiilil
+                        </span>
+                    </li>
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic10.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @coals_0329
+                        </span>
+                    </li>
+                </ul>
+                <div class="modal-page w-none ml-15 mt-1">
+                    <ul class="modal-pagination page-modal">
+                        <li><a href="#" class="modal-arrow modal-left">&lt;&lt;</a></li>
+                        <li><a href="#" class="modal-active modal-num">1</a></li>
+                        <li><a href="#" class="modal-num">2</a></li>
+                        <li><a href="#" class="modal-num">3</a></li>
+                        <li><a href="#" class="modal-num">4</a></li>
+                        <li><a href="#" class="modal-num">5</a></li>
+                        <li><a href="#" class="modal-arrow modal-right">&gt;&gt;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
             <!-- Scripts -->
             <script src="../static/main-assets/js/jquery.min.js"></script>
@@ -179,9 +267,11 @@
                     let style = window.getComputedStyle(switchLabel).background;
 
                     if (style.indexOf('rgb(239, 239, 239)') < 0) {
-                        alert("프로필을 비공개하시겠습니까?");
+                        confirm("프로필을 비공개하시겠습니까?");
+                        switchLabel.style(style);
                     } else {
-                        alert("프로필을 공개하시겠습니까?");
+                        confirm("프로필을 공개하시겠습니까?");
+                        switchLabel.style(style);
                     }
                 }
             </script>
