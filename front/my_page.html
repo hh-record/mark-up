@@ -111,6 +111,51 @@
                             </div>
                         </div>
                     </div>
+                    <div class="h-450">
+                        <hr />
+                        <div class="flex-content">
+                            <h2 class="ml-2">추천 친구</h2>
+                            <h3 class="pointer">&#11118;</h3>
+                        </div>
+                        <div class="flex-content">
+                            <div class="friend-card">
+                                <div class="friend-box m-15">
+                                    <img class="profile" src="../static/main-images/pic01.jpg" alt="">
+                                </div>
+                                <div class="flex-content">
+                                    <span class="user-id">@abcedfu_123</span>
+                                    <span class="icon solid fa-plus follow pointer" onclick="follow('unFollow', '@abcedfu_123');"></span>
+                                </div>
+                            </div>
+                            <div class="friend-card">
+                                <div class="friend-box m-15">
+                                    <img class="profile" src="../static/main-images/pic03.jpg" alt="">
+                                </div>
+                                <div class="flex-content">
+                                    <span class="user-id">@lililiiiilililil</span>
+                                    <span class="icon solid fa-plus follow pointer" onclick="follow('unFollow', '@lililiiiilililil');"></span>
+                                </div>
+                            </div>
+                            <div class="friend-card">
+                                <div class="friend-box m-15">
+                                    <img class="profile" src="../static/main-images/pic12.jpg" alt="">
+                                </div>
+                                <div class="flex-content">
+                                    <span class="user-id">@hi_99</span>
+                                    <span class="icon solid fa-check follow pointer" onclick="follow('follow', '@hi_99');"></span>
+                                </div>
+                            </div>
+                            <div class="friend-card">
+                                <div class="friend-box m-15">
+                                    <img class="profile" src="../static/main-images/pic02.jpg" alt="">
+                                </div>
+                                <div class="flex-content">
+                                    <span class="user-id">@debug92error</span>
+                                    <span class="icon solid fa-plus follow pointer" onclick="follow('unFollow', '@debug92error');"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -273,6 +318,15 @@
                         switchLabel.style(style);
                     }
                 }
+
+                function follow(followCheck, id) {
+                    if (followCheck == 'unFollow') {
+                        confirm(id + "님을 팔로우 하시겠습니까?");
+                    } else if (followCheck == 'follow') {
+                        confirm(id + "님 팔로우 취소하시겠습니까?");
+                    }
+                }
+
             </script>
         </div>
 
