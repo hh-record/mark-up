@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vmax;
+    height: 113vmax;
     display: none;
     background-color: rgba(0, 0, 0, 0.1);
 }
@@ -16,8 +16,21 @@
     margin-top: 2em;
 }
 
+.mt {
+    margin-top: 1em;
+}
+
 .mr-5 {
     margin-right: 18em;
+}
+
+.ml-15 {
+    margin-left: 1.5em;
+}
+
+.follow {
+    margin-right: 1em;
+    margin-bottom: 0.1em;
 }
 
 .modal-body {
