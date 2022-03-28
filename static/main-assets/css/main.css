@@ -102,6 +102,10 @@
     height: 450px;
 }
 
+.w-10 {
+    width: 10em;
+}
+
 .none {
     display: none;
 }
