@@ -68,9 +68,19 @@
                         </div>
                     </div>
                     <div class="mt-3">
-                        <input id="themeUse" class="themeUse" type="checkbox" onclick="check();">
-                        <label for="themeUse">주제 일기 작성하기</label>
+                        <div>
+                            <input id="themeUse" class="themeUse" type="checkbox" onclick="check();">
+                            <label for="themeUse">주제 일기 작성하기</label>
+                        </div>
+                        <div>
+                            <select name="search" id="search" class="hanFont w-10">
+								<option value="PRIAVTE">비공개</option>
+								<option value="ALL_PUBLIC">전체공개</option>
+								<option value="FRIEND_PUBLIC">친구공개</option>
+							</select>
+                        </div>
                     </div>
+                    
                 </div>
                 <div id="quote" class="mt-3" style="display: none;">
                     <blockquote>나를 행복하게 만드는 것은 무엇인가요?</blockquote>
