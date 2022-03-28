@@ -102,6 +102,10 @@
     height: 450px;
 }
 
+.none {
+    display: none;
+}
+
 .friend-card {
     width: 230px;
     height: 270px;
