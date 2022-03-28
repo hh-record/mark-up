@@ -20,6 +20,14 @@
     margin-top: 3em;
 }
 
+.mb-05 {
+    margin-bottom: 0.5em;
+}
+
+.ml-15 {
+    margin-left: 15%;
+}
+
 .mt-1 {
     margin-top: 1em;
 }
@@ -58,6 +66,35 @@
 
 .pl-0 {
     padding-left: 0px !important;
+}
+
+.p-30 {
+    padding: 30px !important;
+}
+
+.p-none {
+    padding: 0px !important;
+}
+
+.m-none {
+    margin: 0px !important;
+}
+
+.h-50 {
+    height: 50px;
+}
+
+.vertical-align {
+    align-items: center;
+    display: flex;
+}
+
+.position-fixed {
+    position: fixed !important;
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 .box {
@@ -374,9 +411,12 @@ textarea {
 .pagination a {
     color: black;
     text-decoration: none;
-    width: 8.3%;
     float: left;
     text-align: center;
+}
+
+.w-83 {
+    width: 8.3% !important;
 }
 
 .pagination a:hover:not(.active) {
