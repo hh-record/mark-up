@@ -102,6 +102,11 @@
     margin-top: 0px !important;
 }
 
+.bold {
+    font-weight: 900;
+    font-size: inherit;
+}
+
 .pointer {
     cursor: pointer;
 }
