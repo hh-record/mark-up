@@ -7,6 +7,53 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+.text {
+    color: black;
+	margin: 1em;
+	font-size: 20px;
+}
+
+.viewAll {
+	font-size: 15px !important;
+	cursor: pointer;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.flex-content {
+    display: flex;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.sort-end {
+    float: right;
+}
+
+.idFind, .pwFind {
+	position: relative;
+    width: 500px;
+	height: 600px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+	margin: 4em;
+}
+
+.none {
+	display: none;
+}
+
+.mt-46 {
+	margin-top: 4.6em;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,

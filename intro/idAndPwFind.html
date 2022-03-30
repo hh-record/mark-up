@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>HH Intro</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/intro-assets/css/main.css" />
+		<link rel="stylesheet" href="../static/intro-assets/css/modal.css" />
+		<noscript><link rel="stylesheet" href="../static/intro-assets/css/noscript.css" /></noscript>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+	</head>
+	<body>
+        <div id="bg"></div>
+        <div id="content" class="flex-content">
+            <div class="idFind">
+                <h1 class="text">아이디 찾기</h1>
+                <form id="findId">
+                    <div class="textForm">
+                        <input name="userName" type="text" class="name" placeholder="이름">
+                    </div>
+                    <div class="textForm">
+                        <input name="idEmail" type="text" class="email" placeholder="이메일">
+                    </div>
+                    <div class="textForm">
+                        <input name="phoneNumber" class="cellphoneNo" placeholder="전화번호">
+                    </div>
+                    <div class="pl-4">
+                        <input class="btn text-center" value="Find Id" onclick="findId();">
+                    </div>
+                </form>
+                <div id="idSuccess" class="text text-center none">
+                    <span>회원 아이디</span><br>
+                    <span id="staticId">co*****29</span><br>
+                    <span id="viewAll" class="viewAll" onclick="viewAll();">view all</span>
+                </div>
+            </div>
+            <div class="pwFind">
+                <h1 class="text">비밀번호 찾기</h1>
+                <form id="findPw">
+                    <div class="textForm">
+                        <input name="id" type="text" class="id" placeholder="아이디">
+                    </div>
+                    <div class="textForm">
+                        <input name="pwEmail" type="text" class="email" placeholder="이메일">
+                    </div>
+                    <div class="pl-4">
+                        <input class="btn text-center mt-46" value="Find Password" onclick="findPw();">
+                    </div>
+                </form>
+                <div id="sendMail" class="none">
+                    <div class="textForm flex-content mb-0">
+                        <input name="certification" class="certification" placeholder="인증번호를 입력해주세요">
+                        <label for="certification" onclick="checkCertification();">인증하기</label>
+                    </div>
+                    <span id="time" class="time sort-end">05:00</span>
+                </div>
+            </div>
+        </div>
+
+		<script src="../static/intro-assets/js/idAndPwFind.js"></script>
+			
+	</body>
+</html>
