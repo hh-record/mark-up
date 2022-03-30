@@ -81,9 +81,9 @@
                     </section>
                     <div class="flex-content">
                         <div>
-                            <span class="bold pointer">🥰 좋아요 2</span> <!-- 이미 좋아요 표시한 것 -->
-                            <span class="pointer">😢 슬퍼요 11</span>
-                            <span class="bold pointer">💪 힘내요 5</span>
+                            <span id="like" class="bold pointer" onclick="addEmotion('like', document.getElementById('likeCount').textContent);">🥰 좋아요 <span id="likeCount">2</span></span>
+                            <span id="sad" class="pointer" onclick="addEmotion('sad', document.getElementById('sadCount').textContent);">😢 슬퍼요 <span id="sadCount">11</span></span>
+                            <span id="cheerUp" class="bold pointer" onclick="addEmotion('cheerUp', document.getElementById('cheerUpCount').textContent);">💪 힘내요 <span id="cheerUpCount">5</span></span>
                         </div>
                     </div>
                 </div>
@@ -114,9 +114,9 @@
                     </section>
                     <div class="flex-content">
                         <div>
-                            <span class="bold pointer">🥰 좋아요 2</span> <!-- 이미 좋아요 표시한 것 -->
-                            <span class="pointer">😢 슬퍼요 11</span>
-                            <span class="bold pointer">💪 힘내요 5</span>
+                            <span id="like" class="bold pointer" onclick="addEmotion('like', document.getElementById('likeCount').textContent);">🥰 좋아요 <span id="likeCount">2</span></span>
+                            <span id="sad" class="pointer" onclick="addEmotion('sad', document.getElementById('sadCount').textContent);">😢 슬퍼요 <span id="sadCount">11</span></span>
+                            <span id="cheerUp" class="bold pointer" onclick="addEmotion('cheerUp', document.getElementById('cheerUpCount').textContent);">💪 힘내요 <span id="cheerUpCount">5</span></span>
                         </div>
                     </div>
                 </div>
@@ -147,9 +147,9 @@
                     </section>
                     <div class="flex-content">
                         <div>
-                            <span class="bold pointer">🥰 좋아요 2</span> <!-- 이미 좋아요 표시한 것 -->
-                            <span class="pointer">😢 슬퍼요 11</span>
-                            <span class="bold pointer">💪 힘내요 5</span>
+                            <span id="like" class="bold pointer" onclick="addEmotion('like', document.getElementById('likeCount').textContent);">🥰 좋아요 <span id="likeCount">2</span></span>
+                            <span id="sad" class="pointer" onclick="addEmotion('sad', document.getElementById('sadCount').textContent);">😢 슬퍼요 <span id="sadCount">11</span></span>
+                            <span id="cheerUp" class="bold pointer" onclick="addEmotion('cheerUp', document.getElementById('cheerUpCount').textContent);">💪 힘내요 <span id="cheerUpCount">5</span></span>
                         </div>
                     </div>
                 </div>
@@ -180,9 +180,9 @@
                     </section>
                     <div class="flex-content">
                         <div>
-                            <span class="bold pointer">🥰 좋아요 2</span> <!-- 이미 좋아요 표시한 것 -->
-                            <span class="pointer">😢 슬퍼요 11</span>
-                            <span class="bold pointer">💪 힘내요 5</span>
+                            <span id="like" class="bold pointer" onclick="addEmotion('like', document.getElementById('likeCount').textContent);">🥰 좋아요 <span id="likeCount">2</span></span>
+                            <span id="sad" class="pointer" onclick="addEmotion('sad', document.getElementById('sadCount').textContent);">😢 슬퍼요 <span id="sadCount">11</span></span>
+                            <span id="cheerUp" class="bold pointer" onclick="addEmotion('cheerUp', document.getElementById('cheerUpCount').textContent);">💪 힘내요 <span id="cheerUpCount">5</span></span>
                         </div>
                     </div>
                 </div>
@@ -218,6 +218,21 @@
             } else if (followCheck == 'follow') {
                 confirm(id + "님 팔로우를 취소하시겠습니까?");
             }
+        }
+
+        function addEmotion(id, count) {
+            let idElement = document.getElementById(id);
+            let classElementById = document.getElementById(id).className;
+            let countElement = document.getElementById(id + 'Count');
+
+            if (classElementById.indexOf('bold') > -1) {
+                idElement.setAttribute('class', 'pointer');
+                countElement.innerText = Number(count) - 1;
+            } else {
+                idElement.setAttribute('class', 'bold pointer');
+                countElement.innerText = Number(count) + 1;
+            }
+
         }
     </script>
 
