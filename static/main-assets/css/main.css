@@ -20,8 +20,24 @@
     width: 15em;
 }
 
+.index-4 {
+    z-index: 4;
+}
+
+.fs-small {
+    font-size: small;
+}
+
 .mt-3 {
-    margin-top: 3em;
+    margin-top: 3em !important;
+}
+
+.over-view {
+    cursor: pointer;
+}
+
+.over-view:hover {
+    color : rgb(112, 161, 224) !important;
 }
 
 .mb-05 {
