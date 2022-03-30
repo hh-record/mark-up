@@ -82,6 +82,22 @@
                                     </div>
 
                                     <div class="mb-2">
+                                        <div id="pwCheck">
+                                            <label for="password-check">비밀번호 확인 / 변경</label>
+                                            <div class="password-check">
+                                                <input type="password" id="password-check" class="hanFont">
+                                                <label for="password-check" onclick="passwordCheck();">비밀번호 확인</label>
+                                            </div>
+                                        </div>
+                                        <div id="pw" class="none">
+                                            <div class="password">
+                                                <input type="password" id="password" class="hanFont">
+                                                <label for="password" onclick="password();">비밀번호 변경</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-2">
                                         <label for="userName">닉네임</label>
                                         <input id="userName" name="userName" class="w-100" type="text" value="관리자1">
                                     </div>
@@ -157,6 +173,19 @@
                 } else {
                     confirm("프로필을 공개하시겠습니까?");
                     switchLabel.style(style);
+                }
+            }
+
+            function passwordCheck() {
+                alert('확인되었습니다.');
+                document.getElementById('pw').removeAttribute('class', 'none');
+            }
+
+            function password() {
+                // 비밀번호 벨리데이션 체크 필요
+
+                if (confirm('비밀번호를 변경하시겠습니까?')) {
+                    alert('변경 되었습니다.');
                 }
             }
 
