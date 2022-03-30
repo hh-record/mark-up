@@ -85,6 +85,10 @@
     height: 50px;
 }
 
+.pl-05 {
+    padding-left: 0.5em;
+}
+
 .vertical-align {
     align-items: center;
     display: flex;
@@ -92,6 +96,11 @@
 
 .position-fixed {
     position: fixed !important;
+}
+
+.pv-icon {
+    margin: 0.5em;
+    font-size: 3em;
 }
 
 .flex {

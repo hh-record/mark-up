@@ -53,10 +53,13 @@
             <div class="inner">
                 <div>
                     <div class="container">
-                        <div class="sort-end flex-content">
+                        <div class="flex-content">
                             <div>
                                 <div class="box">
                                     <img class="profile" src="../static/main-images/pic05.jpg" alt="">
+                                </div>
+                                <div class="pl-05">
+                                    @coals_0329
                                 </div>
                                 <ul class="pl-0">
                                     <li class="follow pointer">
@@ -67,96 +70,8 @@
                                         <a onclick="toggleFollowingModal();">Following 34</a>
                                     </li>
                                 </ul>
-                                <div class="flex-content">
-                                    <div>프로필<br>비공개 / 공개</div>
-                                    <div>
-                                        <input type="checkbox" id="switch" onclick="toggleIsPrivate();">
-                                        <label for="switch" id="switch_label" class="switch_label">
-                                          <span class="onf_btn"></span>
-                                        </label>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12 order-md-1">
-                                <h2>내 정보</h2>
-
-                                <div class="mb-2">
-                                    <label for="address">아이디</label>
-                                    <div>admin1</div>
-                                </div>
-
-                                <div class="mb-2">
-                                    <label for="username">닉네임</label>
-                                    <div class="input-group">관리자1</div>
-                                </div>
-
-
-                                <div class="mb-2">
-                                    <label for="email">이메일</label>
-                                    <div class="input-group">ghdcoalss33@gmail.com</div>
-                                </div>
-
-                                <div class="mb-2">
-                                    <label for="address2">전화번호</label>
-                                    <div>010-1111-2222</div>
-                                </div>
-
-                                <div>
-                                    <a href="my_modify_page.html">
-                                        <input type="button" value="내 정보 수정하러 가기">
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="h-450">
-                        <hr />
-                        <div class="flex-content">
-                            <h2 class="ml-2">추천 친구</h2>
-                            <h3 class="pointer">&#11118;</h3>
-                        </div>
-                        <div class="flex-content">
-                            <div class="friend-card">
-                                <div class="friend-box m-15">
-                                    <img class="profile" src="../static/main-images/pic01.jpg" alt="">
-                                </div>
-                                <div class="flex-content">
-                                    <span class="user-id">@abcedfu_123</span>
-                                    <span class="icon solid fa-plus follow pointer" onclick="follow('unFollow', '@abcedfu_123');"></span>
-                                </div>
-                            </div>
-                            <div class="friend-card">
-                                <div class="friend-box m-15">
-                                    <img class="profile" src="../static/main-images/pic03.jpg" alt="">
-                                </div>
-                                <div class="flex-content">
-                                    <span class="user-id">@lililiiiilililil</span>
-                                    <span class="icon solid fa-plus follow pointer" onclick="follow('unFollow', '@lililiiiilililil');"></span>
-                                </div>
-                            </div>
-                            <div class="friend-card">
-                                <div class="friend-box m-15">
-                                    <img class="profile" src="../static/main-images/pic12.jpg" alt="">
-                                </div>
-                                <div class="flex-content">
-                                    <span class="user-id">@hi_99</span>
-                                    <span class="icon solid fa-check follow pointer" onclick="follow('follow', '@hi_99');"></span>
-                                </div>
-                            </div>
-                            <div class="friend-card">
-                                <div class="friend-box m-15">
-                                    <img class="profile" src="../static/main-images/pic02.jpg" alt="">
-                                </div>
-                                <div class="flex-content">
-                                    <span class="user-id">@debug92error</span>
-                                    <span class="icon solid fa-plus follow pointer" onclick="follow('unFollow', '@debug92error');"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -305,27 +220,6 @@
                 function toggleFollowingModal(name) {
                     let followingModal = document.getElementById('following');
                     followingModal.classList.toggle('show');
-                }
-
-                function toggleIsPrivate() {
-                    let switchLabel = document.getElementById('switch_label');
-                    let style = window.getComputedStyle(switchLabel).background;
-
-                    if (style.indexOf('rgb(239, 239, 239)') < 0) {
-                        confirm("프로필을 비공개하시겠습니까?");
-                        switchLabel.style(style);
-                    } else {
-                        confirm("프로필을 공개하시겠습니까?");
-                        switchLabel.style(style);
-                    }
-                }
-
-                function follow(followCheck, id) {
-                    if (followCheck == 'unFollow') {
-                        confirm(id + "님을 팔로우 하시겠습니까?");
-                    } else if (followCheck == 'follow') {
-                        confirm(id + "님 팔로우를 취소하시겠습니까?");
-                    }
                 }
 
             </script>
