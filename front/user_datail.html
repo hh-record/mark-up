@@ -54,14 +54,15 @@
                 <div>
                     <div class="container">
                         <div class="flex-content">
-                            <div>
+                            <div id="user-profile" class="mt-1">
                                 <div class="box">
                                     <img class="profile" src="../static/main-images/pic05.jpg" alt="">
                                 </div>
                                 <div class="pl-05">
-                                    @coals_0329
+                                    <span>@coals_0329</span>
+                                    <span class="icon solid fa-plus follow pointer" onclick="follow('unFollow', '@coals_0329');"></span>
                                 </div>
-                                <ul class="pl-0">
+                                <ul class="pl-0 w-15">
                                     <li class="follow pointer">
                                         <a onclick="toggleFollowerModal();">Follower 132</a>
                                     </li>
@@ -71,10 +72,47 @@
                                     </li>
                                 </ul>
                             </div>
+                            <div class="flex-content">
+                                <div class="vertical-align">
+                                    <a href="user_datail.html"><span class="pointer pv-icon">&lt;</span></a>
+                                </div>
+                                <div class="record">
+                                    <section>
+                                        <div class="flex-content">
+                                            
+                                            <div>
+                                                <span>&#10004; 주제 일기</span> <br>
+                                                <span>2022.01.31</span>
+                                            </div>
+                                        </div>
+                                        <span class="image main"><img src="../static/main-images/pic13.jpg" alt="" /></span>
+                                        <div id="quote" class="mt-3 mb-3">
+                                            <blockquote>나를 행복하게 만드는 것은 무엇인가요?</blockquote>
+                                        </div>
+                                        <p>난 오늘 사케동을 먹었다. 사케동은 너무 맛있다. 난 연어 사케동을 제일 좋아한다. 이번 생은 다이어트 글렀나보다. 이 몸매를 유지하기 위해 더 많은 사케동을 먹어야겠다. 나는 사케동말고도 아구찜도 좋아한다. 순살 아구찜이 좋다. 근데 우리 집 주변에서 아구찜 맛있는 곳을 모르겠다. 다음에 투어 다녀야겠다. 배고프다. 오늘 점심 뭐먹지... 오늘 점심 뭐먹을까요?? 사케동이 먹고 싶긴 한데 아직도 회사 근처에
+                                            뭐가 있는지 잘 몰라서... 길치라서... 친구랑 같이 먹을까... 프로젝트 무사히 끝날 수 있기를... 기도할게요... 아 근데 진짜 배고프다 오늘 점심에 맛있는거 먹고 싶다 엄청 맛있는거는 뭐가 있을까 오늘 저녁은 안먹어야지... 다이어트해야돼...</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum.
+                                            Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque
+                                            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
+                                        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum
+                                            sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+                                    </section>
+                                    <div class="flex-content">
+                                        <div>
+                                            <span id="like" class="bold pointer" onclick="addEmotion('like', document.getElementById('likeCount').textContent);">🥰 좋아요 <span id="likeCount">2</span></span>
+                                            <span id="sad" class="pointer" onclick="addEmotion('sad', document.getElementById('sadCount').textContent);">😢 슬퍼요 <span id="sadCount">11</span></span>
+                                            <span id="cheerUp" class="bold pointer" onclick="addEmotion('cheerUp', document.getElementById('cheerUpCount').textContent);">💪 힘내요 <span id="cheerUpCount">5</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vertical-align">
+                                    <a href="user_datail.html"><span class="pointer pv-icon">&gt;</span></a>
+                                </div>
+                            </div>
                         </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
         <!-- Footer -->
         <footer id="footer">
@@ -220,6 +258,29 @@
                 function toggleFollowingModal(name) {
                     let followingModal = document.getElementById('following');
                     followingModal.classList.toggle('show');
+                }
+
+                function follow(followCheck, id) {
+                    if (followCheck == 'unFollow') {
+                        confirm(id + "님을 팔로우 하시겠습니까?");
+                    } else if (followCheck == 'follow') {
+                        confirm(id + "님 팔로우를 취소하시겠습니까?");
+                    }
+                }
+
+                function addEmotion(id, count) {
+                    let idElement = document.getElementById(id);
+                    let classElementById = document.getElementById(id).className;
+                    let countElement = document.getElementById(id + 'Count');
+
+                    if (classElementById.indexOf('bold') > -1) {
+                        idElement.setAttribute('class', 'pointer');
+                        countElement.innerText = Number(count) - 1;
+                    } else {
+                        idElement.setAttribute('class', 'bold pointer');
+                        countElement.innerText = Number(count) + 1;
+                    }
+
                 }
 
             </script>
