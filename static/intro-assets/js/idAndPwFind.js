@@ -41,10 +41,12 @@ function findPw() {
     const id = document.getElementsByName('id')[0].value;
     const pwEmail = document.getElementsByName('pwEmail')[0].value;
     const timeDisplay = document.getElementById('time');
+    const findPwBtn = document.getElementById('findPwBtn');
 
     if (idValidation(id) && pwEmailValidation(pwEmail)) {
         // aixos
         alert('인증 메일을 전송하였습니다.');
+        removeFindPwBtn(findPwBtn);
         startTimer(time, timeDisplay);
     }
 }
@@ -59,6 +61,7 @@ function pwEmailValidation(pwEmail) {
 
 function startTimer(count, display) {  
     const sendMail = document.getElementById('sendMail');
+    const findPwBtn = document.getElementById('findPwBtn');
     let minutes, seconds;
 
     sendMail.setAttribute('class', '');
@@ -73,17 +76,22 @@ function startTimer(count, display) {
 
         if (--count < 0) {
             clearInterval(timer);
-            setTimeElement(display, sendMail);
+            setTimeElement(display, sendMail, findPwBtn);
             isRunning = false;
         }
     }, 1000);
     isRunning = true;
 }
 
-function setTimeElement(display, sendMail) {
+function removeFindPwBtn(findPwBtn) {
+    findPwBtn.setAttribute('onclick', '');
+}
+
+function setTimeElement(display, sendMail, findPwBtn) {
     alert("인증 시간이 초과되었습니다. 다시 시도해주세요.");
     display.textContent = '05:00';
     sendMail.setAttribute('class', 'none');
+    findPwBtn.setAttribute('onclick', 'findPw();')
 }
 
 function checkCertification() {
