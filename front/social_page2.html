@@ -55,6 +55,18 @@
         <!-- Main -->
         <div id="main">
             <div class="inner">
+                <div class="flex">
+                    <div>
+                        <select name="search" id="search" class="hanFont w-5">
+                            <option value="tcg">전체</option>
+                            <option value="t">제목</option>
+                            <option value="c">내용</option>
+                            <option value="g">태그</option>
+                        </select>
+                    </div>
+                    <input type="text" name="search" id="search" placeholder="search" class="mb-1">
+                    <a href="social_page.html" class="icon regular fa-eye sort-end mt-1"> 검색</a>
+                </div>
                 <div class="record">
                     <section>
                         <div class="flex-content">
@@ -185,6 +197,20 @@
                             <span id="cheerUp" class="bold pointer" onclick="addEmotion('cheerUp', document.getElementById('cheerUpCount').textContent);">💪 힘내요 <span id="cheerUpCount">5</span></span>
                         </div>
                     </div>
+                </div>
+                <div class="pagination mt-3">
+                    <a href="#" class="w-83">1</a>
+                    <a href="#" class="w-83">2</a>
+                    <a href="#" class="active w-83">3</a>
+                    <a href="#" class="w-83">4</a>
+                    <a href="#" class="w-83">5</a>
+                    <a href="#" class="w-83">6</a>
+                    <a href="#" class="w-83">7</a>
+                    <a href="#" class="w-83">8</a>
+                    <a href="#" class="w-83">9</a>
+                    <a href="#" class="w-83">10</a>
+                    <a href="#" class="w-83">&gt;</a>
+                    <a href="#" class="w-83">&raquo;</a>
                 </div>
             </div>
         </div>

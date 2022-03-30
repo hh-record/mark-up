@@ -1,0 +1,460 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Record Regist</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../static/main-assets/css/main.css" />
+    <link rel="stylesheet" href="../static/main-assets/css/modal.css" />
+	<noscript><link rel="stylesheet" href="../static/main-assets/css/noscript.css" /></noscript>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+</head>
+
+<body class="is-preload hanFont">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <a href="main.html" class="logo">
+                    <span class="symbol"><img src="../static/main-images/logo.svg" alt="" /></span><span class="title">HH</span>
+                </a>
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="record_celendar.html">Calendar</a></li>
+                <li><a href="social_page.html">Social</a></li>
+                <li><a href="social_page2.html">Social v2</a></li>
+                <li><a href="my_page.html">My Page</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <div>
+                    <div class="container">
+                        <div class="flex-content">
+                            <div id="user-profile" class="mt-1">
+                                <div class="userOne mb-2">
+                                    <div class="box">
+                                        <img class="profile" src="../static/main-images/pic05.jpg" alt="">
+                                    </div>
+                                    <div class="pl-05">
+                                        <span>@coals_0329</span>
+                                        <span class="icon solid fa-plus follow pointer" onclick="follow('unFollow', '@coals_0329');"></span>
+                                    </div>
+                                    <ul class="pl-0 w-15 m-none">
+                                        <li class="follow pointer">
+                                            <a onclick="toggleFollowerModal();">Follower 132</a>
+                                        </li>
+                                        |
+                                        <li class="follow pointer">
+                                            <a onclick="toggleFollowingModal();">Following 34</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="users" class="none">
+                                    <div class="userOne mb-2">
+                                        <div class="box">
+                                            <img class="profile" src="../static/main-images/pic12.jpg" alt="">
+                                        </div>
+                                        <div class="pl-05">
+                                            <span>@abcedfu_123</span>
+                                            <span class="icon solid fa-plus follow pointer" onclick="follow('unFollow', '@coals_0329');"></span>
+                                        </div>
+                                        <ul class="pl-0 w-15 m-none">
+                                            <li class="follow">
+                                                Follower 132
+                                            </li>
+                                            |
+                                            <li class="follow">
+                                                Following 34
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="userOne mb-2">
+                                        <div class="box">
+                                            <img class="profile" src="../static/main-images/pic06.jpg" alt="">
+                                        </div>
+                                        <div class="pl-05">
+                                            <span>@lililiiiilililil</span>
+                                            <span class="icon solid fa-plus follow pointer" onclick="follow('unFollow', '@coals_0329');"></span>
+                                        </div>
+                                        <ul class="pl-0 w-15 m-none">
+                                            <li class="follow">
+                                                Follower 132
+                                            </li>
+                                            |
+                                            <li class="follow">
+                                                Following 34
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+							<section class="tiles mt-0">
+								<article class="style1">
+									<span class="image">
+										<img src="../static/main-images/pic01.jpg" alt="" />
+									</span>
+									<a href="user_datail.html">
+										<h2>2022.01.04</h2>
+										<div class="content">
+											<p>오늘은 사케동을 먹었다.</p>
+											<span>🥰 11 😢 0 💪 3</span>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="../static/main-images/pic02.jpg" alt="" />
+									</span>
+									<a href="user_datail.html">
+										<h2>2022.01.05</h2>
+										<div class="content">
+											<p>오늘도 사케동을 먹었따.</p>
+											<span>🥰 4 😢 198 💪 3</span>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="../static/main-images/pic03.jpg" alt="" />
+									</span>
+									<a href="user_datail.html">
+										<h2>2022.01.06</h2>
+										<div class="content">
+											<p>오늘은 아구찜 먹었다. 내일은 사케동 먹을거다.</p>
+											<span>🥰 0 😢 0 💪 55</span>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="../static/main-images/pic04.jpg" alt="" />
+									</span>
+									<a href="user_datail.html">
+										<h2>2022.01.08</h2>
+										<div class="content">
+											<p>오늘 사케동을 먹으려 했는데 아구찜을 먹었따.</p>
+											<span>🥰 2,461 😢 12 💪 4</span>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="../static/main-images/pic05.jpg" alt="" />
+									</span>
+									<a href="user_datail.html">
+										<h2>2022.01.10</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<span>🥰 11 😢 0 💪 3</span>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="../static/main-images/pic06.jpg" alt="" />
+									</span>
+									<a href="user_datail.html">
+										<h2>2022.01.11</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<span>🥰 11 😢 0 💪 3</span>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="../static/main-images/pic07.jpg" alt="" />
+									</span>
+									<a href="user_datail.html">
+										<h2>2022.01.12</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<span>🥰 11 😢 0 💪 3</span>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="../static/main-images/pic08.jpg" alt="" />
+									</span>
+									<a href="user_datail.html">
+										<h2>2022.01.15</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<span>🥰 11 😢 0 💪 3</span>
+										</div>
+									</a>
+								</article>
+								<article class="style1">
+									<span class="image">
+										<img src="../static/main-images/pic09.jpg" alt="" />
+									</span>
+									<a href="user_datail.html">
+										<h2>2022.01.16</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<span>🥰 11 😢 0 💪 3</span>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="../static/main-images/pic10.jpg" alt="" />
+									</span>
+									<a href="user_datail.html">
+										<h2>2022.01.17</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<span>🥰 11 😢 0 💪 3</span>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="../static/main-images/pic11.jpg" alt="" />
+									</span>
+									<a href="user_datail.html">
+										<h2>2022.01.19</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<span>🥰 11 😢 0 💪 3</span>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="../static/main-images/pic12.jpg" alt="" />
+									</span>
+									<a href="user_datail.html">
+										<h2>2022.01.23</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<span>🥰 11 😢 0 💪 3</span>
+										</div>
+									</a>
+								</article>
+                                <div class="pagination mt-3">
+                                    <a href="#" class="w-83">1</a>
+                                    <a href="#" class="w-83">2</a>
+                                    <a href="#" class="active w-83">3</a>
+                                    <a href="#" class="w-83">4</a>
+                                    <a href="#" class="w-83">5</a>
+                                    <a href="#" class="w-83">6</a>
+                                    <a href="#" class="w-83">7</a>
+                                    <a href="#" class="w-83">8</a>
+                                    <a href="#" class="w-83">9</a>
+                                    <a href="#" class="w-83">10</a>
+                                    <a href="#" class="w-83">&gt;</a>
+                                    <a href="#" class="w-83">&raquo;</a>
+                                </div>
+							</section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Follow</h2>
+                    <ul class="icons">
+                        <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+                        <li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="#" class="icon brands style2 fa-google"><span class="label">Email</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved</li>
+                    <li>문의 사항은 메일로 보내주세요. 감사합니다.</li>
+                    <li>Version 1.0.0</li>
+                </ul>
+            </div>
+        </footer>
+
+        <div id="follower" class="modal index-4">
+            <div class="modal-body p-30 position-fixed">
+                <div class="mt-1 mb-2 flex-content">
+                    <span class="hanFont text-black">follower</span>
+                    <span class="text-black pointer" onclick="toggleFollowerModal();">X</span>
+                </div>
+                <ul class="p-none m-none mb-2">
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic01.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @happy_dog_146
+                        </span>
+                    </li>
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic02.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @dobby_is_free
+                        </span>
+                    </li>
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic03.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @lilliliiilil
+                        </span>
+                    </li>
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic10.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @coals_0329
+                        </span>
+                    </li>
+                </ul>
+                <div class="modal-page w-none ml-25 mt-1">
+                    <ul class="modal-pagination page-modal">
+                        <li><a href="#" class="modal-arrow modal-left">&lt;&lt;</a></li>
+                        <li><a href="#" class="modal-active modal-num">1</a></li>
+                        <li><a href="#" class="modal-num">2</a></li>
+                        <li><a href="#" class="modal-num">3</a></li>
+                        <li><a href="#" class="modal-num">4</a></li>
+                        <li><a href="#" class="modal-num">5</a></li>
+                        <li><a href="#" class="modal-arrow modal-right">&gt;&gt;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="following" class="modal index-4">
+            <div class="modal-body p-30 position-fixed">
+                <div class="mt-1 mb-2 flex-content">
+                    <span class="hanFont text-black">following</span>
+                    <span class="text-black pointer" onclick="toggleFollowingModal();">X</span>
+                </div>
+                <ul class="p-none m-none mb-2">
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic01.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @happy_dog_146
+                        </span>
+                    </li>
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic03.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @lilliliiilil
+                        </span>
+                    </li>
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic10.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @coals_0329
+                        </span>
+                    </li>
+                    <li class="flex-content h-50 mb-05">
+                        <div class="mini-box">
+                            <img class="profile" src="../static/main-images/pic02.jpg" alt="">
+                        </div>
+                        <span class="vertical-align">
+                            @dobby_is_free
+                        </span>
+                    </li>
+                </ul>
+                <div class="modal-page w-none ml-25 mt-1">
+                    <ul class="modal-pagination page-modal">
+                        <li><a href="#" class="modal-arrow modal-left">&lt;&lt;</a></li>
+                        <li><a href="#" class="modal-active modal-num">1</a></li>
+                        <li><a href="#" class="modal-num">2</a></li>
+                        <li><a href="#" class="modal-num">3</a></li>
+                        <li><a href="#" class="modal-num">4</a></li>
+                        <li><a href="#" class="modal-num">5</a></li>
+                        <li><a href="#" class="modal-arrow modal-right">&gt;&gt;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+            <!-- Scripts -->
+            <script src="../static/main-assets/js/jquery.min.js"></script>
+            <script src="../static/main-assets/js/browser.min.js"></script>
+            <script src="../static/main-assets/js/breakpoints.min.js"></script>
+            <script src="../static/main-assets/js/util.js"></script>
+            <script src="../static/main-assets/js/main.js"></script>
+
+            <script>
+                function toggleFollowerModal(name) {
+                    let followerModal = document.getElementById('follower');
+                    followerModal.classList.toggle('show');
+                }
+
+                function toggleFollowingModal(name) {
+                    let followingModal = document.getElementById('following');
+                    followingModal.classList.toggle('show');
+                }
+
+                function follow(followCheck, id) {
+                    if (followCheck == 'unFollow') {
+                        confirm(id + "님을 팔로우 하시겠습니까?");
+                    } else if (followCheck == 'follow') {
+                        confirm(id + "님 팔로우를 취소하시겠습니까?");
+                    }
+                }
+
+                function addEmotion(id, count) {
+                    let idElement = document.getElementById(id);
+                    let classElementById = document.getElementById(id).className;
+                    let countElement = document.getElementById(id + 'Count');
+
+                    if (classElementById.indexOf('bold') > -1) {
+                        idElement.setAttribute('class', 'pointer');
+                        countElement.innerText = Number(count) - 1;
+                    } else {
+                        idElement.setAttribute('class', 'bold pointer');
+                        countElement.innerText = Number(count) + 1;
+                    }
+                }
+
+            </script>
+        </div>
+
+</body>
+
+</html>
+<script src="../static/main-assets/js/util.js"></script>
+<script src="../static/main-assets/js/main.js"></script>
+
+</body>
+
+</html>
